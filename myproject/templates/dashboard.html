@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+<main id="main">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 my-5">
+                <table class="table ">
+                    <tr>
+                        <th>Sr.no</th>
+                        <th>Username</th>
+                        <th>Date of Birth</th>
+                        <th>Phone Number</th>
+                        <th>Time</th>
+                        <th>Adress</th>
+                    </tr>
+                {% for x in data %}
+                    <tr>
+                        <td>{{x.id}}</td>
+                        <td>{{x.username}}</td>
+                        <td>{{x.DOB}}</td>
+                        <td>{{x.phone_no}}</td>
+                        <td>{{x.created_on}}</td>
+                        <td>{{x.address}}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div> <!-- End of table-->
+           
+
+        </div><!-- End of row-->
+    </div><!-- End of container-->
+    
+</main>
+{% endblock 'main' %}
+
